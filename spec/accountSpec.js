@@ -7,7 +7,7 @@ describe('Account', function() {
   });
 
   it('Account starts with the balance of zero', function() {
-    expect(account.balance()).toEqual(0);
+    expect(account.displayBalance()).toEqual(0);
   });
 
 });
