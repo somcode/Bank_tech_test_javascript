@@ -6,3 +6,7 @@ function Account() {
 Account.prototype.displayBalance = function() {
   return this.balance;
 }
+
+Account.prototype.deposit = function(amount, date) {
+  return this.balance += amount;
+}
