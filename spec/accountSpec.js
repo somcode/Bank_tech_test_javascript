@@ -15,4 +15,10 @@ describe('Account', function() {
     expect(account.displayBalance()).toEqual(1000);
   });
 
+  it('Client can withdrawl amount from account', function() {
+    account.balance = 1000;
+    account.withdrawl(200, "14/03/2018")
+    expect(account.displayBalance()).toEqual(800);
+  });
+
 });

@@ -10,3 +10,7 @@ Account.prototype.displayBalance = function() {
 Account.prototype.deposit = function(amount, date) {
   return this.balance += amount;
 }
+
+Account.prototype.withdrawl = function(amount, date) {
+  return this.balance -= amount;
+}
