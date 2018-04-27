@@ -21,4 +21,8 @@ describe('Account', function() {
     expect(account.displayBalance()).toEqual(800);
   });
 
+  it('Throw an error if amount is more than balance', function() {
+    expect( function(){ account.withdrawl(100, "14/03/2018") }).toThrow ("You don't have enough balance");
+  })
+
 });
