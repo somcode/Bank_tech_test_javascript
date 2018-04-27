@@ -12,5 +12,8 @@ Account.prototype.deposit = function(amount, date) {
 }
 
 Account.prototype.withdrawl = function(amount, date) {
+  if(amount > this.balance) {
+    throw new Error("You don't have enough balance");
+  }
   return this.balance -= amount;
 }
