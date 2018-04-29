@@ -25,4 +25,8 @@ describe('Account', function() {
     expect( function(){ account.withdrawl(100, "14/03/2018") }).toThrowError ("You don't have enough balance");
   })
 
+  it('After making deposit return date, credit and balance', function() {
+    expect(account.deposit(1000, "12/03/2018")).toEqual({date: "12/03/2018", amount: 1000, balance: 1000})
+  })
+
 });
