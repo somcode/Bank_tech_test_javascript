@@ -29,4 +29,9 @@ describe('Account', function() {
     expect(account.deposit(1000, "12/03/2018")).toEqual({date: "12/03/2018", amount: 1000, balance: 1000})
   })
 
+  it('After naking withdrawl return date, credit and balance', function() {
+    account.balance = 1000;
+    expect(account.withdrawl(200,"12/03/2018")).toEqual({date: "12/03/2018", amount: -200, balance: 800})
+  })
+
 });

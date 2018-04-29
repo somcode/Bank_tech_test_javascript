@@ -20,5 +20,8 @@ Account.prototype.withdrawl = function(amount, date) {
     throw new Error("You don't have enough balance");
   }
    this.balance -= amount;
-  
+   return {date: date,
+          amount: -amount,
+          balance: this.balance
+        };
 }
